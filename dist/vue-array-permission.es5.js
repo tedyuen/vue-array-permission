@@ -2,7 +2,7 @@
  * @Author: Ted Yuen
  * @Date: 2019-11-27 10:52:01
  * @Last Modified by: Ted Yuen
- * @Last Modified time: 2019-11-27 15:14:19
+ * @Last Modified time: 2019-11-27 15:18:30
  * @Desc: main entrance
  */
 var VueArrayPermission = /** @class */ (function () {

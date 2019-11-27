@@ -17,7 +17,7 @@ Vue.apermission.authorize(['test:permission1','test:permission1']);
 
 Vue.apermission.hasPermission('test:permission1'); // console.log(true);
 
-Vue.apermission.reset(); // clear the permissions and god flag.
+Vue.apermission.reset(); // clear the permissions.
 
 // if u don't has permission the div will not show. and style display none.
 <div v-ap-show:test:permission1></div>
