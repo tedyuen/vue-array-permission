@@ -2,7 +2,7 @@
  * @Author: Ted Yuen
  * @Date: 2019-11-27 10:52:01
  * @Last Modified by: Ted Yuen
- * @Last Modified time: 2019-11-27 12:15:35
+ * @Last Modified time: 2019-11-27 14:48:19
  * @Desc: main entrance
  */
 var VueArrayPermission = /** @class */ (function () {
@@ -30,14 +30,12 @@ var Plugin = {
         var apermissionIns = new VueArrayPermission();
         Vue.apermission = apermissionIns;
         Vue.prototype.$apermission = apermissionIns;
-        Vue.directive('permission', function (el, binding) {
-            if (typeof binding.expression === 'string') {
-                if (apermissionIns.hasPermission(binding.expression)) {
-                    el.style.display = 'none';
-                }
-                else {
-                    el.style.display = 'block';
-                }
+        Vue.directive('ap-show', function (el, binding) {
+            if (!apermissionIns.hasPermission(binding.arg)) {
+                el.style.display = 'none';
+            }
+            else {
+                el.style.display = 'block';
             }
         });
     }
