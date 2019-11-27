@@ -39,10 +39,10 @@
           Vue.directive('permission', function (el, binding) {
               if (typeof binding.expression === 'string') {
                   if (apermissionIns.hasPermission(binding.expression)) {
-                      el.style.display = "none";
+                      el.style.display = 'none';
                   }
                   else {
-                      el.style.display = "block";
+                      el.style.display = 'block';
                   }
               }
           });
