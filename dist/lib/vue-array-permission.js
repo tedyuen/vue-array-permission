@@ -36,9 +36,6 @@ var Plugin = {
             if (!apermissionIns.hasPermission(binding.arg)) {
                 el.style.display = 'none';
             }
-            else {
-                el.style.display = 'block';
-            }
         });
     }
 };

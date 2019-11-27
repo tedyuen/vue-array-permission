@@ -35,8 +35,6 @@ let Plugin = {
     Vue.directive('ap-show', function(el: any, binding: any) {
       if (!apermissionIns.hasPermission(binding.arg)) {
         el.style.display = 'none'
-      } else {
-        el.style.display = 'block'
       }
     })
   }
