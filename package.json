@@ -1,8 +1,11 @@
 {
   "name": "vue-array-permission",
-  "version": "1.0.0",
+  "version": "0.1.2",
   "description": "A tools of using array permission in Vue",
-  "keywords": ["vue","permission"],
+  "keywords": [
+    "vue",
+    "permission"
+  ],
   "main": "dist/vue-array-permission.umd.js",
   "module": "dist/vue-array-permission.es5.js",
   "typings": "dist/types/vue-array-permission.d.ts",
