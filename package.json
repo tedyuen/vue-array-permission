@@ -4,7 +4,10 @@
   "description": "A tools of using array permission in Vue",
   "keywords": [
     "vue",
-    "permission"
+    "permission",
+    "v-permission",
+    "directive",
+    "vuejs"
   ],
   "main": "dist/vue-array-permission.umd.js",
   "module": "dist/vue-array-permission.es5.js",
@@ -52,13 +55,15 @@
   },
   "jest": {
     "transform": {
-      ".(ts|tsx)": "ts-jest"
+      ".(ts|tsx)": "ts-jest",
+      ".*\\.(vue)$": "vue-jest"
     },
     "testEnvironment": "jsdom",
     "testRegex": "/test/.*\\.(test|spec)\\.(ts)$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
+      "vue",
       "js"
     ],
     "coverageThreshold": {
@@ -91,13 +96,15 @@
     "@commitlint/config-conventional": "^7.1.2",
     "@types/jest": "^24.0.13",
     "@types/node": "^10.11.0",
+    "@types/vue": "^2.0.0",
+    "@vue/test-utils": "^1.0.0-beta.29",
     "colors": "^1.3.2",
     "commitizen": "^3.0.0",
     "coveralls": "^3.0.2",
     "cross-env": "^5.2.0",
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^1.0.1",
-    "jest": "^23.6.0",
+    "jest": "^24.8.0",
     "jest-config": "^24.8.0",
     "lint-staged": "^8.0.0",
     "lodash.camelcase": "^4.3.0",
@@ -111,6 +118,7 @@
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.18.0",
+    "rollup-plugin-vue": "^5.1.4",
     "semantic-release": "^15.9.16",
     "shelljs": "^0.8.3",
     "travis-deploy-once": "^5.0.9",
@@ -120,6 +128,9 @@
     "tslint-config-prettier": "^1.15.0",
     "tslint-config-standard": "^8.0.1",
     "typedoc": "^0.12.0",
-    "typescript": "^3.4.5"
+    "typescript": "^3.7.2",
+    "vue": "^2.6.10",
+    "vue-jest": "^3.0.5",
+    "vue-template-compiler": "^2.6.10"
   }
 }
