@@ -64,6 +64,9 @@ let Plugin = {
     let apermissionIns = new VueArrayPermission()
     Vue.vap = apermissionIns
     Vue.prototype.$vap = apermissionIns
+    Vue.directive('ap-show', function(el: any, binding: any) {
+      el.style.visibility = apermissionIns.v(binding.arg) ? TYPE[TYPE.visible] : TYPE[TYPE.hidden]
+    })
     Vue.directive('ap-v', function(el: any, binding: any) {
       el.style.visibility = apermissionIns.v(binding.value) ? TYPE[TYPE.visible] : TYPE[TYPE.hidden]
     })

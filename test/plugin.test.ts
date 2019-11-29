@@ -10,6 +10,8 @@ const Component = {
     <div>
       <div class="visible-content" v-ap-v="'a'">Content</div>
       <div class="hidden-content" v-ap-v="'d'">Content</div>
+      <div class="show-content" v-ap-show:a>Content</div>
+      <div class="none-content" v-ap-show:d>Content</div>
       <div class="and-visible-content" v-ap-vand="['a','b']">Content</div>
       <div class="and-hidden-content" v-ap-vand="['a','d']">Content</div>
       <div class="or-visible-content" v-ap-vor="['a','d']">Content</div>
@@ -20,6 +22,10 @@ const Component = {
 
 describe('permission plugin test', () => {
   const wrapper = mount(Component, { localVue })
+  it('Single permission show test', () => {
+    expect(wrapper.find('div .show-content').isVisible()).toBeTruthy()
+    expect(wrapper.find('div .none-content').isVisible()).toBeFalsy()
+  })
   it('Single permission visible test', () => {
     expect(wrapper.find('div .visible-content').isVisible()).toBeTruthy()
     expect(wrapper.find('div .hidden-content').isVisible()).toBeFalsy()

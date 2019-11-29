@@ -72,14 +72,21 @@ var Plugin = {
         var apermissionIns = new VueArrayPermission();
         Vue.vap = apermissionIns;
         Vue.prototype.$vap = apermissionIns;
+        Vue.directive('ap-show', function (el, binding) {
+            el.style.visibility = apermissionIns.v(binding.arg) ? TYPE[TYPE.visible] : TYPE[TYPE.hidden];
+        });
         Vue.directive('ap-v', function (el, binding) {
             el.style.visibility = apermissionIns.v(binding.value) ? TYPE[TYPE.visible] : TYPE[TYPE.hidden];
         });
         Vue.directive('ap-vand', function (el, binding) {
-            el.style.visibility = apermissionIns.vAnd(binding.value) ? TYPE[TYPE.visible] : TYPE[TYPE.hidden];
+            el.style.visibility = apermissionIns.vAnd(binding.value)
+                ? TYPE[TYPE.visible]
+                : TYPE[TYPE.hidden];
         });
         Vue.directive('ap-vor', function (el, binding) {
-            el.style.visibility = apermissionIns.vOr(binding.value) ? TYPE[TYPE.visible] : TYPE[TYPE.hidden];
+            el.style.visibility = apermissionIns.vOr(binding.value)
+                ? TYPE[TYPE.visible]
+                : TYPE[TYPE.hidden];
         });
     }
 };
